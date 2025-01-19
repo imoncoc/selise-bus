@@ -18,7 +18,8 @@ export interface TSeat {
   providedIn: 'root',
 })
 export class StorageService {
-  buses = new BehaviorSubject([
+  // private busesSubject = new BehaviorSubject<TBus[]>
+  buses: TBus[] = [
     {
       id: '1',
       name: 'Shamoli',
@@ -151,7 +152,7 @@ export class StorageService {
         { id: 'E3', number: 'E3', isBooked: false },
       ],
     },
-  ]);
+  ];
 
   constructor() {
     this.initializeStorage();

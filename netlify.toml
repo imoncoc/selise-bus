@@ -1,5 +1,5 @@
 [build]
-  publish = "dist/quick-mart-angular-2"
+  publish = "dist/viva"
   command = "ng build"
 [[redirects]]
   from = "/*"
