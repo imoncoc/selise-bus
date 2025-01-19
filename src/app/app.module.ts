@@ -20,6 +20,11 @@ import { MatTableModule } from '@angular/material/table';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
+import { BusComponent } from './components/bus/bus.component';
+import { MyBusDetailsComponent } from './components/my-bus-details/my-bus-details.component';
+import { MyFormComponent } from './components/my-form/my-form.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { AdminModalComponent } from './components/admin-modal/admin-modal.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +32,11 @@ import { HomeComponent } from './components/home/home.component';
     NavbarComponent,
     LoginComponent,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
+    BusComponent,
+    MyBusDetailsComponent,
+    MyFormComponent,
+    AdminModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,9 +52,10 @@ import { HomeComponent } from './components/home/home.component';
     MatSelectModule,
     MatSnackBarModule,
     MatMenuModule,
-    MatTableModule
+    MatTableModule,
+    MatDialogModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

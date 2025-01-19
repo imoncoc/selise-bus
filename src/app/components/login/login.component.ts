@@ -1,5 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, FormGroupDirective, NgForm, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  FormGroupDirective,
+  NgForm,
+  Validators,
+} from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/shared/services/auth-service.service';
@@ -19,11 +26,10 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   }
 }
 
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
@@ -73,10 +79,10 @@ export class LoginComponent implements OnInit {
         this.authService.login(matchingUser);
 
         if (matchingUser.role === 'admin') {
-          this.router.navigate(['/admin']);
+          this.router.navigate(['/']);
           this.snackbarService.showMessage('Successfully login', 'Success');
         } else {
-          this.router.navigate(['/user']);
+          this.router.navigate(['/']);
           this.snackbarService.showMessage('Successfully login', 'Success');
         }
       } else {
@@ -94,5 +100,4 @@ export class LoginComponent implements OnInit {
   logout() {
     this.authService.logout();
   }
-
 }
